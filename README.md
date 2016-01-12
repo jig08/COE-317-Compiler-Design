@@ -1,4 +1,4 @@
-# COE-317-Compiler-Design
+# COE-317 Compiler Design
 
 *Programs for Compiler Design Lab*
 
