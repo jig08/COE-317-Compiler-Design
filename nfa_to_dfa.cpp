@@ -13,6 +13,8 @@ using namespace std;
 
 int main()
 {
+	cout<<endl<<"***Converting a given Non-Deterministic Finite State Automata having 4 states and 2 input variables to a Deterministic Finite State Automata***"<<endl;
+	
     int input[4][2],output[16][2],flag[16];
 
     for(int i=0;i<16;i++)
