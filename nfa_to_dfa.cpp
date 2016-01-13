@@ -25,11 +25,16 @@ int main()
             output[i][j] = 0;
     }
     
+    cout<<endl<<"Input the Transition Table for two input variables say 0 and 1 in integer form of bit-masked numbers (Q3_Q2_Q1_Q0): "<<endl;
     for(int i=0;i<4;i++)
+    {
+    	cout<<"State Q"<<i<<": ";
         for(int j=0;j<2;j++)
             cin>>input[i][j];
+    }
     
     vector <int> v;
+    //Starting from State Q0
     v.push_back(1);
     
     while(v.size()!=0)
@@ -50,7 +55,7 @@ int main()
                     int a = pow(2,i);
                     
                     if((t&a) == a)
-                        newstate = (newstate|in[i][j]);
+                        newstate = (newstate|input[i][j]);
                 }
                 
                 int temp_flag = 0;
@@ -68,13 +73,16 @@ int main()
                 
                 if(flag[newstate] == 0 && temp_flag == 0)
                 {
-                    std::cout<<newstate<<std::endl;
+                    //cout<<newstate<<endl;
                     v.push_back(newstate);
                 }
             }
         }
     }
     
+    cout<<endl<<"Transition Table for two input variables say 0 and 1 in integer form of bit-masked numbers (Q3_Q2_Q1_Q0): "<<endl;
     for(int i=0;i<16;i++)
-        std::cout<<i<<"\t"<<ou[i][0]<<"\t"<<ou[i][1]<<std::endl;
+        cout<<"State \tQ"<<i<<": \t"<<output[i][0]<<"\t"<<output[i][1]<<endl;
+        
+        cout<<endl<<endl;
 }
